@@ -1,0 +1,66 @@
+import React from "react";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify"; // ✅ import ToastContainer
+import "react-toastify/dist/ReactToastify.css";
+
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import About from "./components/About";
+import Cart from "./components/Cart";
+import Contact from "./components/Contact";
+import SingleViewPage from "./components/SinglePage";
+import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import CartPage from "./pages/CartPage";
+import OrderPlaced from "./components/OrderPlaced";
+import Register from "./pages/Register";
+import AdminPage from "./pages/AdminPage";
+import AddProduct from "./pages/AddProduct";
+import CheckAllUsers from "./pages/CheckAllUsers";
+import ScrollToTop from "./components/ScrollToTop";
+import OrdersPage from "./pages/OrderPage";
+import CategoryNav from "./components/CategoryNav";
+import CategoryProducts from "./pages/CategoryProducts";
+import CategoryManager from "./components/CategoryManager";
+import ProductManager from "./components/ProductManager";
+import PaymentsPage from "./pages/PaymentsPage";
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <div className="App w-screen min-h-screen ">
+        <Nav />
+        {/* <CategoryNav /> */}
+        <Routes>
+          <Route
+            path="/category/:categorySlug"
+            element={<CategoryProducts />}
+          />
+          <Route path="/categorymanager" element={<CategoryManager />} />
+          <Route path="/productmanager" element={<ProductManager />} />
+          <Route path="/paymentpage" element={<PaymentsPage />} />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/singleview/:id" element={<SingleViewPage />} />
+          <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/orderplaced" element={<OrderPlaced />} />
+          <Route path="/adminpage" element={<AdminPage />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/checkallusers" element={<CheckAllUsers />} />
+          <Route path="/orderpage" element={<OrdersPage />} />
+        </Routes>
+        <Footer />
+        <ToastContainer position="top-right" autoClose={3000} />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
