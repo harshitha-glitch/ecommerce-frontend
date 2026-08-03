@@ -466,7 +466,7 @@ const AdminPage = () => {
                         Current Image:
                       </p>
                       <img
-                        src={`http://13.60.206.242:3000${updateForm.image}`}
+                        src={`http://13.49.49.249:3000${updateForm.image}`}
                         alt="Current"
                         className="w-32 h-32 object-cover rounded-lg border border-gray-300"
                       />
