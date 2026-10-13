@@ -17,7 +17,7 @@ const Home = () => {
   const searchTimeoutRef = useRef(null);
 
   const API_BASE_URL =
-    import.meta.env.VITE_API_BASE_URL || "http://13.49.49.249:3000/api";
+    import.meta.env.VITE_API_BASE_URL || "http://13.63.237.179:3000/api";
   const token = localStorage.getItem("token");
 
   useEffect(() => {
