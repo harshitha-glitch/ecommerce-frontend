@@ -1,6 +1,6 @@
 // src/config.js
 const config = {
-    API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://13.63.237.179:3000/api",
+    API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://13.61.176.80:3000/api",
 };
 
 export default config;
